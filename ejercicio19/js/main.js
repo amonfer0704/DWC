@@ -3,6 +3,7 @@ const pagoTarde = 30;
 const pagoNoche = 35;
 let totalBruto = 0;
 
+let total = document.getElementById("total");
 let resultado = document.getElementById("resultado");
 document.getElementById("calcular").addEventListener("click", function(){
     try{
@@ -14,12 +15,15 @@ document.getElementById("calcular").addEventListener("click", function(){
             let bruto = calcularBruto(numHorasTrabajadas, turno);
             let neto = calcularNeto(bruto);
             totalBruto += bruto;
-            resultado.innerHTML += nombre + " " + apellido + ", bruto: " + bruto + "€, neto: " + neto;
+            resultado.innerHTML += nombre + " " + apellido + ", bruto: " + bruto + "€, neto: " + neto + "<br>";
         }
     }
     catch(err){
         resultado.innerHTML = "Error " + err;
     }
+})
+document.getElementById("terminar").addEventListener("click", function(){
+    total.innerHTML = "Total salario bruto: " + totalBruto + "€"
 })
 function validar(nombre, apellido, numHorasTrabajadas, turno){
     if(nombre.trim() === "" || apellido.trim() === "" || isNaN(numHorasTrabajadas) || numHorasTrabajadas <= 0 || turno === null){
