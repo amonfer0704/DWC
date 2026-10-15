@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 19</title>
+    <script src="./js/main.js" defer></script>
+</head>
+<body>
+    <h1>Calculadora de salarios</h1>
+    <h3>Nombre</h3>
+    <input id="nombre">
+    <h3>Apellido</h3>
+    <input id="apellido">
+    <h3>Número de horas trabajadas</h3>
+    <input type="number" id="numHorasTrabajadas">
+    <h3>Turno realizado</h3>
+    <input type="radio" name="turnos" id="turnoMañana" value="mañana">
+    <label for="turnoMañana">Mañanas</label>
+    <input type="radio" name="turnos" id="turnoTarde" value="tarde">
+    <label for="turnoTarde">Tardes</label>
+    <input type="radio" name="turnos" id="turnoNoche" value="noche">
+    <label for="turnoNoche">Noches</label>
+    <button id="calcular">Calcular</button>
+    <p id="resultado"></p>
+</body>
+</html>
