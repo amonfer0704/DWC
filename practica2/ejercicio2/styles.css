@@ -1,0 +1,56 @@
+body {
+  font-family: Arial, sans-serif;
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+h1 {
+  color: #2c3e50;
+}
+
+h2 {
+  font-size: 1.1em;
+  color: #555;
+  margin-top: 30px;
+}
+
+.botones {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.botones a {
+  background: #2c3e50;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.botones a:hover {
+  background: #3d566e;
+}
+
+/* Páginas de ejercicios */
+.enunciado {
+  text-align: left;
+}
+
+#salida {
+  text-align: left;
+  background: #f4f4f4;
+  border-left: 4px solid #2c3e50;
+  padding: 10px 20px;
+  margin: 20px 0;
+  min-height: 40px;
+}
+
+.volver {
+  display: inline-block;
+  margin-top: 20px;
+  color: #2c3e50;
+}
