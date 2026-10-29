@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio 6 · Calendario de eventos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="cabecera">
+    <a class="volver" href="../index.html">← Índice de ejercicios</a>
+    <p class="etiqueta">Ejercicio 6</p>
+    <h1>Calendario de eventos</h1>
+  </header>
+
+  <main class="contenedor">
+    <section class="enunciado" aria-label="Enunciado">
+      <p><strong>Calendario de Eventos:</strong> permite agregar eventos con título y fecha/hora. Implementa una lista dinámica con los eventos ordenados cronológicamente.</p>
+    </section>
+
+    <section class="tarjeta">
+      <h2>Nuevo evento</h2>
+      <div class="fila">
+        <div class="campo"><label for="titulo">Título</label><input id="titulo" type="text" maxlength="80" autocomplete="off"></div>
+        <div class="campo"><label for="fecha">Fecha y hora</label><input id="fecha" type="datetime-local"></div>
+      </div>
+      <div class="acciones">
+        <button type="button" id="btn-agregar">Agregar evento</button>
+      </div>
+      <p id="mensaje" class="mensaje error" hidden></p>
+    </section>
+
+    <section class="tarjeta">
+      <h2>Próximos eventos</h2>
+      <ul id="lista-eventos" class="eventos" aria-live="polite">
+        <li class="vacio">Todavía no hay eventos.</li>
+      </ul>
+    </section>
+  </main>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

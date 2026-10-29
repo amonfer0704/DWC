@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio 1 · Jerarquía de objetos: Persona, Estudiante y Profesor</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="cabecera">
+    <a class="volver" href="../index.html">← Índice de ejercicios</a>
+    <p class="etiqueta">Ejercicio 1</p>
+    <h1>Jerarquía de objetos: Persona, Estudiante y Profesor</h1>
+  </header>
+
+  <main class="contenedor">
+    <section class="enunciado" aria-label="Enunciado">
+      <p>Define la jerarquía <strong>Persona</strong> (nombre, edad, género y <code>obtDetalles()</code>), <strong>Estudiante</strong> (curso, grupo y <code>registrar()</code>) y <strong>Profesor</strong> (asignatura, nivel y <code>asignar()</code>). Los dos últimos heredan de Persona. Crea los objetos y casos de prueba necesarios.</p>
+    </section>
+
+    <div class="rejilla">
+      <section class="tarjeta" id="tarjeta-persona">
+        <h2>Persona</h2>
+
+            <div class="campo"><label for="p-nombre">Nombre</label><input id="p-nombre" type="text" autocomplete="off"></div>
+            <div class="campo"><label for="p-edad">Edad</label><input id="p-edad" type="number" min="0" max="120"></div>
+            <div class="campo"><label for="p-genero">Género</label>
+              <select id="p-genero">
+                <option value="Masculino">Masculino</option>
+                <option value="Femenino">Femenino</option>
+                <option value="Otro">Otro</option>
+              </select>
+            </div>
+        <div class="acciones">
+          <button type="button" id="p-crear">Crear Persona</button>
+          <button type="button" id="p-detalles" class="secundario">obtDetalles()</button>
+        </div>
+      </section>
+
+      <section class="tarjeta" id="tarjeta-estudiante">
+        <h2>Estudiante</h2>
+
+            <div class="campo"><label for="e-nombre">Nombre</label><input id="e-nombre" type="text" autocomplete="off"></div>
+            <div class="campo"><label for="e-edad">Edad</label><input id="e-edad" type="number" min="0" max="120"></div>
+            <div class="campo"><label for="e-genero">Género</label>
+              <select id="e-genero">
+                <option value="Masculino">Masculino</option>
+                <option value="Femenino">Femenino</option>
+                <option value="Otro">Otro</option>
+              </select>
+            </div>
+        <div class="campo"><label for="e-curso">Curso</label><input id="e-curso" type="text" placeholder="1º DAW"></div>
+        <div class="campo"><label for="e-grupo">Grupo</label><input id="e-grupo" type="text" placeholder="A"></div>
+        <div class="acciones">
+          <button type="button" id="e-crear">Crear Estudiante</button>
+          <button type="button" id="e-detalles" class="secundario">obtDetalles()</button>
+          <button type="button" id="e-registrar" class="secundario">registrar()</button>
+        </div>
+      </section>
+
+      <section class="tarjeta" id="tarjeta-profesor">
+        <h2>Profesor</h2>
+
+            <div class="campo"><label for="pr-nombre">Nombre</label><input id="pr-nombre" type="text" autocomplete="off"></div>
+            <div class="campo"><label for="pr-edad">Edad</label><input id="pr-edad" type="number" min="0" max="120"></div>
+            <div class="campo"><label for="pr-genero">Género</label>
+              <select id="pr-genero">
+                <option value="Masculino">Masculino</option>
+                <option value="Femenino">Femenino</option>
+                <option value="Otro">Otro</option>
+              </select>
+            </div>
+        <div class="campo"><label for="pr-asignatura">Asignatura</label><input id="pr-asignatura" type="text"></div>
+        <div class="campo"><label for="pr-nivel">Nivel</label><input id="pr-nivel" type="text"></div>
+        <div class="acciones">
+          <button type="button" id="pr-crear">Crear Profesor</button>
+          <button type="button" id="pr-detalles" class="secundario">obtDetalles()</button>
+          <button type="button" id="pr-asignar" class="secundario">asignar()</button>
+        </div>
+      </section>
+    </div>
+
+    <section class="tarjeta">
+      <h2>Casos de prueba y salida</h2>
+      <div class="acciones">
+        <button type="button" id="btn-pruebas">Ejecutar casos de prueba</button>
+        <button type="button" id="btn-limpiar" class="secundario">Limpiar salida</button>
+      </div>
+      <div id="salida" class="salida" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

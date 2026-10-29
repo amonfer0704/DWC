@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio 2 · Cálculo de una pendiente</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="cabecera">
+    <a class="volver" href="../index.html">← Índice de ejercicios</a>
+    <p class="etiqueta">Ejercicio 2</p>
+    <h1>Cálculo de una pendiente</h1>
+  </header>
+
+  <main class="contenedor">
+    <section class="enunciado" aria-label="Enunciado">
+      <p>Calcula la <strong>longitud de la pendiente</strong>, su <strong>ángulo de inclinación</strong> (Ángulo 1) y el <strong>% de inclinación</strong>.</p>
+      <p>Longitud = √(longitud² + altura²) · Ángulo = tan⁻¹((y2 − y1) / (x2 − x1)) · Pendiente (%) = (metros ascendidos / metros recorridos) · 100</p>
+    </section>
+
+    <section class="tarjeta">
+      <svg class="diagrama" viewBox="0 0 380 170" role="img" aria-label="Triángulo rectángulo con la longitud, la altura, la longitud de la pendiente y el ángulo 1">
+        <polygon class="triangulo" points="20,140 320,140 320,30"/>
+        <polyline class="recto" points="302,140 302,122 320,122"/>
+        <path class="arco" d="M60,140 A40,40 0 0 0 57.6,126.3"/>
+        <text x="170" y="160" text-anchor="middle">Longitud</text>
+        <text x="328" y="90">Altura</text>
+        <text x="66" y="135" class="pequeno">Ángulo 1</text>
+        <text x="100" y="102" transform="rotate(-20 100 102)">Longitud de la pendiente</text>
+      </svg>
+    </section>
+
+    <section class="tarjeta">
+      <h2>Datos</h2>
+      <div class="fila">
+        <div class="campo"><label for="longitud">Longitud horizontal (m)</label><input id="longitud" type="number" step="any" min="0"></div>
+        <div class="campo"><label for="altura">Altura / metros ascendidos (m)</label><input id="altura" type="number" step="any" min="0"></div>
+      </div>
+
+      <fieldset class="puntos">
+        <legend>Dos puntos cualesquiera de la pendiente</legend>
+        <div class="fila">
+          <div class="campo"><label for="x1">x1</label><input id="x1" type="number" step="any"></div>
+          <div class="campo"><label for="y1">y1</label><input id="y1" type="number" step="any"></div>
+          <div class="campo"><label for="x2">x2</label><input id="x2" type="number" step="any"></div>
+          <div class="campo"><label for="y2">y2</label><input id="y2" type="number" step="any"></div>
+        </div>
+      </fieldset>
+
+      <div class="acciones">
+        <button type="button" id="btn-calcular">Calcular</button>
+        <button type="button" id="btn-limpiar" class="secundario">Limpiar</button>
+      </div>
+    </section>
+
+    <section class="tarjeta" aria-live="polite">
+      <h2>Resultados</h2>
+      <div class="cuadricula-datos">
+        <div class="dato"><span class="valor" id="res-longitud">—</span><span class="nombre">Longitud de la pendiente (m)</span></div>
+        <div class="dato"><span class="valor" id="res-angulo">—</span><span class="nombre">Ángulo 1 (grados)</span></div>
+        <div class="dato"><span class="valor" id="res-porcentaje">—</span><span class="nombre">Pendiente (%)</span></div>
+      </div>
+      <p id="mensaje" class="mensaje" hidden></p>
+    </section>
+  </main>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio 11 · Redimensionar la ventana</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="cabecera">
+    <a class="volver" href="../index.html">← Índice de ejercicios</a>
+    <p class="etiqueta">Ejercicio 11</p>
+    <h1>Redimensionar la ventana</h1>
+  </header>
+
+  <main class="contenedor">
+    <section class="enunciado" aria-label="Enunciado">
+      <p>Crea una web con un botón que, al presionarlo, <strong>redimensione la ventana a 600 × 500</strong>.</p>
+    </section>
+
+    <section class="tarjeta">
+      <h2>Redimensionar</h2>
+      <div class="acciones">
+        <button type="button" id="btn-redimensionar">Redimensionar a 600 × 500</button>
+      </div>
+
+      <div class="cuadricula-datos" aria-live="polite">
+        <div class="dato"><span class="valor" id="ancho">—</span><span class="nombre">ancho de la ventana</span></div>
+        <div class="dato"><span class="valor" id="alto">—</span><span class="nombre">alto de la ventana</span></div>
+      </div>
+      <p class="nota">Los navegadores modernos solo permiten <code>resizeTo()</code> en ventanas abiertas con <code>window.open()</code> y no en pestañas normales. Si el botón no hace nada, prueba desde una ventana abierta por script.</p>
+    </section>
+  </main>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

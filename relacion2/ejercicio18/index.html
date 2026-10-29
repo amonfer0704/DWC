@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio 18 · Eliminar etiquetas &lt;script&gt;</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="cabecera">
+    <a class="volver" href="../index.html">← Índice de ejercicios</a>
+    <p class="etiqueta">Ejercicio 18</p>
+    <h1>Eliminar etiquetas &lt;script&gt;</h1>
+  </header>
+
+  <main class="contenedor">
+    <section class="enunciado" aria-label="Enunciado">
+      <p>Crea una expresión regular que, al insertar el código de un documento HTML en un <code>&lt;textarea&gt;</code>, <strong>elimine las etiquetas potencialmente peligrosas</strong> (<code>&lt;script&gt;…&lt;/script&gt;</code>) <strong>y todo su contenido</strong> de la cadena HTML.</p>
+    </section>
+
+    <div class="rejilla rejilla-2">
+      <section class="tarjeta">
+        <h2>HTML original</h2>
+        <div class="campo">
+          <label for="entrada">Código HTML</label>
+          <textarea id="entrada" spellcheck="false">&lt;h1&gt;Título&lt;/h1&gt;&#10;&lt;p&gt;Texto inicial.&lt;/p&gt;&#10;&lt;script&gt;alert('Hola');&lt;/script&gt;&#10;&lt;p&gt;Texto final.&lt;/p&gt;&#10;&lt;script src="malo.js"&gt;&lt;/script&gt;</textarea>
+        </div>
+        <div class="acciones">
+          <button type="button" id="btn-limpiar">Limpiar scripts</button>
+          <button type="button" id="btn-vaciar" class="secundario">Vaciar</button>
+        </div>
+      </section>
+
+      <section class="tarjeta">
+        <h2>HTML limpio</h2>
+        <div class="campo">
+          <label for="salida">Resultado</label>
+          <textarea id="salida" readonly spellcheck="false"></textarea>
+        </div>
+        <p class="contador" aria-live="polite">Etiquetas &lt;script&gt; eliminadas: <strong id="num-eliminadas">0</strong></p>
+      </section>
+    </div>
+  </main>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

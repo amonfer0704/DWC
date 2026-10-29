@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio 3 · La constante Pi con 4 decimales</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="cabecera">
+    <a class="volver" href="../index.html">← Índice de ejercicios</a>
+    <p class="etiqueta">Ejercicio 3</p>
+    <h1>La constante Pi con 4 decimales</h1>
+  </header>
+
+  <main class="contenedor">
+    <section class="enunciado" aria-label="Enunciado">
+      <p>Muestra el valor de la constante Pi formateado a <strong>4 decimales</strong> usando <strong>dos métodos distintos</strong>.</p>
+    </section>
+
+    <div class="rejilla">
+      <section class="tarjeta">
+        <h2>Método 1</h2>
+        <p class="metodo">Escribe aquí el método usado (por ejemplo, <code>toFixed()</code>).</p>
+        <p class="pi" id="pi-metodo1" aria-live="polite">—</p>
+      </section>
+
+      <section class="tarjeta">
+        <h2>Método 2</h2>
+        <p class="metodo">Escribe aquí el método usado (por ejemplo, <code>Intl.NumberFormat</code> o <code>Math.round()</code>).</p>
+        <p class="pi" id="pi-metodo2" aria-live="polite">—</p>
+      </section>
+    </div>
+
+    <div class="acciones">
+      <button type="button" id="btn-mostrar">Mostrar Pi</button>
+    </div>
+  </main>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

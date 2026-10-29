@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio 14 · Herramienta de expresiones regulares</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="cabecera">
+    <a class="volver" href="../index.html">← Índice de ejercicios</a>
+    <p class="etiqueta">Ejercicio 14</p>
+    <h1>Herramienta de expresiones regulares</h1>
+  </header>
+
+  <main class="contenedor">
+    <section class="enunciado" aria-label="Enunciado">
+      <p>Herramienta que permite <strong>buscar patrones</strong> en un texto con expresiones regulares (resaltando todas las coincidencias), <strong>mostrar el número de coincidencias</strong>, <strong>reemplazar texto</strong> con expresiones regulares y <strong>mostrar el texto resultante</strong>.</p>
+    </section>
+
+    <section class="tarjeta">
+      <h2>Buscar</h2>
+      <div class="campo">
+        <label for="texto">Texto de prueba</label>
+        <textarea id="texto">Contacto: ana@ejemplo.com y luis-perez@correo.es.&#10;Teléfonos: 600123456, 951 234 567.&#10;Fecha de la reunión: 05/04/2026 a las 10:30.</textarea>
+      </div>
+
+      <div class="fila fila-patron">
+        <div class="campo">
+          <label for="patron">Expresión regular</label>
+          <input id="patron" type="text" spellcheck="false" autocomplete="off" placeholder="\d+">
+        </div>
+        <div class="campo">
+          <label for="banderas">Banderas</label>
+          <input id="banderas" type="text" value="g" maxlength="6" spellcheck="false" autocomplete="off">
+        </div>
+      </div>
+
+      <div class="acciones">
+        <button type="button" id="btn-buscar">Buscar</button>
+      </div>
+
+      <p class="contador" aria-live="polite">Coincidencias: <strong id="num-coincidencias">0</strong></p>
+      <div id="resaltado" class="salida" aria-live="polite"></div>
+      <p id="mensaje" class="mensaje error" hidden></p>
+    </section>
+
+    <section class="tarjeta">
+      <h2>Reemplazar</h2>
+      <div class="campo">
+        <label for="reemplazo">Texto de reemplazo</label>
+        <input id="reemplazo" type="text" spellcheck="false" autocomplete="off" placeholder="Puedes usar $1, $2…">
+      </div>
+      <div class="acciones">
+        <button type="button" id="btn-reemplazar">Reemplazar</button>
+      </div>
+      <h3>Texto resultante</h3>
+      <div id="resultado" class="salida" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

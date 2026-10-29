@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio 4 · Días que llevas viviendo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="cabecera">
+    <a class="volver" href="../index.html">← Índice de ejercicios</a>
+    <p class="etiqueta">Ejercicio 4</p>
+    <h1>Días que llevas viviendo</h1>
+  </header>
+
+  <main class="contenedor">
+    <section class="enunciado" aria-label="Enunciado">
+      <p>Calcula el número de <strong>días que llevas viviendo</strong> hasta el día actual.</p>
+    </section>
+
+    <section class="tarjeta">
+      <div class="campo">
+        <label for="nacimiento">Fecha de nacimiento</label>
+        <input id="nacimiento" type="date">
+      </div>
+      <div class="acciones">
+        <button type="button" id="btn-calcular">Calcular días</button>
+      </div>
+
+      <div class="resultado" aria-live="polite">
+        <span class="valor" id="dias">—</span>
+        <span class="nombre">días vividos</span>
+      </div>
+      <p id="mensaje" class="mensaje" hidden></p>
+    </section>
+  </main>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

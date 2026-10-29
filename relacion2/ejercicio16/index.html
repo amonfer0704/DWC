@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio 16 · Validar una dirección de email</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="cabecera">
+    <a class="volver" href="../index.html">← Índice de ejercicios</a>
+    <p class="etiqueta">Ejercicio 16</p>
+    <h1>Validar una dirección de email</h1>
+  </header>
+
+  <main class="contenedor">
+    <section class="enunciado" aria-label="Enunciado">
+      <p>Crea una expresión regular que valide un email. Antes de la <code>@</code> puede haber cualquier carácter alfanumérico, <code>.</code> y <code>-</code>; tras la <code>@</code>, caracteres alfanuméricos, y el tipo de dominio tiene una longitud de 2 o 3 caracteres.</p>
+    </section>
+
+    <section class="tarjeta">
+      <div class="campo">
+        <label for="email">Dirección de email</label>
+        <input id="email" type="text" autocomplete="off" placeholder="nombre.apellido@dominio.es">
+      </div>
+      <div class="acciones">
+        <button type="button" id="btn-validar">Validar</button>
+      </div>
+      <p id="resultado" class="mensaje" aria-live="polite" hidden></p>
+      <p class="nota">Expresión regular usada: <code id="regex">—</code></p>
+    </section>
+
+    <section class="tarjeta">
+      <h2>Pruebas rápidas</h2>
+      <ul class="pruebas">
+        <li><button type="button" class="secundario prueba" data-valor="ana.garcia@correo.es">ana.garcia@correo.es</button></li>
+        <li><button type="button" class="secundario prueba" data-valor="luis-perez@empresa.com">luis-perez@empresa.com</button></li>
+        <li><button type="button" class="secundario prueba" data-valor="sin-arroba.es">sin-arroba.es</button></li>
+        <li><button type="button" class="secundario prueba" data-valor="usuario@dominio.info">usuario@dominio.info</button></li>
+        <li><button type="button" class="secundario prueba" data-valor="@correo.es">@correo.es</button></li>
+      </ul>
+    </section>
+  </main>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

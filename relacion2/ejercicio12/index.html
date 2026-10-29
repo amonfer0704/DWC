@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio 12 · Navegación por el historial</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="cabecera">
+    <a class="volver" href="../index.html">← Índice de ejercicios</a>
+    <p class="etiqueta">Ejercicio 12</p>
+    <h1>Navegación por el historial</h1>
+  </header>
+
+  <main class="contenedor">
+    <section class="enunciado" aria-label="Enunciado">
+      <p>Script con dos botones: uno para <strong>volver a la página anterior</strong> y otro para <strong>ir a la siguiente</strong>. Las páginas visitadas se muestran en un <code>&lt;iframe&gt;</code> y en cada momento se visualiza la <strong>URL actual</strong>.</p>
+    </section>
+
+    <section class="tarjeta">
+      <div class="barra">
+        <button type="button" id="btn-atras" class="secundario">← Atrás</button>
+        <button type="button" id="btn-adelante" class="secundario">Adelante →</button>
+        <input id="url" type="text" aria-label="Dirección a cargar" placeholder="Dirección de una página" autocomplete="off">
+        <button type="button" id="btn-ir">Ir</button>
+      </div>
+
+      <p class="url-actual">URL actual: <code id="url-actual">—</code></p>
+
+      <nav class="enlaces" aria-label="Páginas de ejemplo">
+        <span>Páginas de ejemplo:</span>
+        <a href="../ejercicio03/index.html" target="visor">Ejercicio 3</a>
+        <a href="../ejercicio04/index.html" target="visor">Ejercicio 4</a>
+        <a href="../ejercicio07/index.html" target="visor">Ejercicio 7</a>
+        <a href="../ejercicio09/index.html" target="visor">Ejercicio 9</a>
+        <a href="../ejercicio15/index.html" target="visor">Ejercicio 15</a>
+      </nav>
+
+      <iframe id="visor" name="visor" title="Visor de páginas" src="about:blank"></iframe>
+      <p class="nota">Por seguridad, el navegador solo deja leer la URL de un <code>&lt;iframe&gt;</code> si la página es del mismo origen. Algunas webs externas tampoco permiten mostrarse dentro de un iframe.</p>
+    </section>
+  </main>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

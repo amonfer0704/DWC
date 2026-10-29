@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio 15 · Validar una fecha</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="cabecera">
+    <a class="volver" href="../index.html">← Índice de ejercicios</a>
+    <p class="etiqueta">Ejercicio 15</p>
+    <h1>Validar una fecha</h1>
+  </header>
+
+  <main class="contenedor">
+    <section class="enunciado" aria-label="Enunciado">
+      <p>Crea una expresión regular que valide una fecha con formato <code>XX/XX/XXXX</code>, donde X es un dígito. Pruébala con la cadena «Nací el 05/04/1982 en Donostia.».</p>
+    </section>
+
+    <section class="tarjeta">
+      <div class="campo">
+        <label for="texto">Texto a comprobar</label>
+        <input id="texto" type="text" value="Nací el 05/04/1982 en Donostia." autocomplete="off">
+      </div>
+      <div class="acciones">
+        <button type="button" id="btn-validar">Validar</button>
+      </div>
+      <p id="resultado" class="mensaje" aria-live="polite" hidden></p>
+      <p class="nota">Expresión regular usada: <code id="regex">—</code></p>
+    </section>
+  </main>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

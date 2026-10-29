@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio 7 · Buscar el carácter «-» en una cadena</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="cabecera">
+    <a class="volver" href="../index.html">← Índice de ejercicios</a>
+    <p class="etiqueta">Ejercicio 7</p>
+    <h1>Buscar el carácter «-» en una cadena</h1>
+  </header>
+
+  <main class="contenedor">
+    <section class="enunciado" aria-label="Enunciado">
+      <p>Solicita una cadena de texto desde el teclado y presenta el <strong>número de caracteres «-»</strong> que contiene y <strong>en qué posiciones</strong> se encuentran.</p>
+    </section>
+
+    <section class="tarjeta">
+      <div class="campo">
+        <label for="cadena">Cadena de texto</label>
+        <input id="cadena" type="text" autocomplete="off" placeholder="Ej.: 2026-10-29 es jueves-viernes">
+      </div>
+      <div class="acciones">
+        <button type="button" id="btn-buscar">Buscar «-»</button>
+        <button type="button" id="btn-limpiar" class="secundario">Limpiar</button>
+      </div>
+
+      <div class="cuadricula-datos" aria-live="polite">
+        <div class="dato"><span class="valor" id="total">—</span><span class="nombre">guiones encontrados</span></div>
+      </div>
+      <div id="posiciones" class="salida" aria-live="polite">Las posiciones aparecerán aquí.</div>
+    </section>
+  </main>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

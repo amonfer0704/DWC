@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio 10 · Abrir una ventana posicionada</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="cabecera">
+    <a class="volver" href="../index.html">← Índice de ejercicios</a>
+    <p class="etiqueta">Ejercicio 10</p>
+    <h1>Abrir una ventana posicionada</h1>
+  </header>
+
+  <main class="contenedor">
+    <section class="enunciado" aria-label="Enunciado">
+      <p>Script que, según el tamaño de la ventana en la que se visualiza la web, abre una <strong>nueva ventana</strong> posicionada a (ancho de resolución actual) − 40 px y (alto de resolución actual) − 20 px de la esquina superior izquierda.</p>
+    </section>
+
+    <section class="tarjeta">
+      <h2>Ventana nueva</h2>
+      <div class="acciones">
+        <button type="button" id="btn-abrir">Abrir ventana</button>
+        <button type="button" id="btn-cerrar" class="secundario">Cerrar ventana</button>
+      </div>
+
+      <div class="cuadricula-datos" aria-live="polite">
+        <div class="dato"><span class="valor" id="res-ancho">—</span><span class="nombre">ancho de resolución</span></div>
+        <div class="dato"><span class="valor" id="res-alto">—</span><span class="nombre">alto de resolución</span></div>
+        <div class="dato"><span class="valor" id="pos-left">—</span><span class="nombre">posición left (ancho − 40)</span></div>
+        <div class="dato"><span class="valor" id="pos-top">—</span><span class="nombre">posición top (alto − 20)</span></div>
+      </div>
+      <p class="nota">Si el navegador bloquea las ventanas emergentes, permítelas para esta página.</p>
+      <p id="mensaje" class="mensaje error" hidden></p>
+    </section>
+  </main>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

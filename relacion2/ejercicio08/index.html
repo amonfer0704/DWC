@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio 8 · Operaciones con un array</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="cabecera">
+    <a class="volver" href="../index.html">← Índice de ejercicios</a>
+    <p class="etiqueta">Ejercicio 8</p>
+    <h1>Operaciones con un array</h1>
+  </header>
+
+  <main class="contenedor">
+    <section class="enunciado" aria-label="Enunciado">
+      <p>Página que presenta los elementos de un <strong>array inicialmente vacío</strong> y botones para: insertar al final, insertar al principio, borrar el primero, borrar el último, insertar en una posición dada, eliminar de una posición dada, ordenar ascendente y ordenar descendente.</p>
+    </section>
+
+    <section class="tarjeta">
+      <h2>Array actual</h2>
+      <p id="array-texto" class="array-texto" aria-live="polite">[ ]</p>
+      <ul id="lista-array" class="chips" aria-label="Elementos del array"></ul>
+      <p class="nota">Longitud: <strong id="longitud">0</strong></p>
+    </section>
+
+    <section class="tarjeta">
+      <h2>Operaciones</h2>
+      <div class="fila">
+        <div class="campo"><label for="valor">Valor</label><input id="valor" type="text" autocomplete="off"></div>
+        <div class="campo"><label for="posicion">Posición (empieza en 0)</label><input id="posicion" type="number" min="0" step="1"></div>
+      </div>
+
+      <div class="botones-array">
+        <button type="button" id="btn-push">Insertar al final</button>
+        <button type="button" id="btn-unshift">Insertar al principio</button>
+        <button type="button" id="btn-shift" class="peligro">Borrar primero</button>
+        <button type="button" id="btn-pop" class="peligro">Borrar último</button>
+        <button type="button" id="btn-insertar-pos">Insertar en posición</button>
+        <button type="button" id="btn-eliminar-pos" class="peligro">Eliminar de posición</button>
+        <button type="button" id="btn-asc" class="secundario">Ordenar ascendente</button>
+        <button type="button" id="btn-desc" class="secundario">Ordenar descendente</button>
+      </div>
+      <p id="mensaje" class="mensaje error" hidden></p>
+    </section>
+  </main>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

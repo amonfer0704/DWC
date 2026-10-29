@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio 9 · Resolución de pantalla en tiempo real</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="cabecera">
+    <a class="volver" href="../index.html">← Índice de ejercicios</a>
+    <p class="etiqueta">Ejercicio 9</p>
+    <h1>Resolución de pantalla en tiempo real</h1>
+  </header>
+
+  <main class="contenedor">
+    <section class="enunciado" aria-label="Enunciado">
+      <p>Aplicación web que muestra en tiempo real la resolución de la pantalla: <strong>ancho y alto</strong>, actualizados al cambiar el tamaño de la ventana (evento <code>resize</code>), e indica si es <strong>móvil</strong> (&lt; 768 px), <strong>tablet</strong> (768 px – 1024 px) o <strong>desktop</strong> (&gt; 1024 px).</p>
+    </section>
+
+    <section class="tarjeta" aria-live="polite">
+      <h2>Tamaño actual</h2>
+      <div class="cuadricula-datos">
+        <div class="dato"><span class="valor" id="ancho">—</span><span class="nombre">ancho (px)</span></div>
+        <div class="dato"><span class="valor" id="alto">—</span><span class="nombre">alto (px)</span></div>
+        <div class="dato"><span class="valor" id="tipo">—</span><span class="nombre">tipo de pantalla</span></div>
+      </div>
+    </section>
+
+    <section class="tarjeta">
+      <h2>Tipos de dispositivo</h2>
+      <ul class="tipos" id="tipos">
+        <li data-tipo="movil"><strong>Móvil</strong><small>&lt; 768 px</small></li>
+        <li data-tipo="tablet"><strong>Tablet</strong><small>768 px – 1024 px</small></li>
+        <li data-tipo="desktop"><strong>Desktop</strong><small>&gt; 1024 px</small></li>
+      </ul>
+      <p class="nota">Redimensiona la ventana del navegador para ver cómo cambian los valores. El script marca el tipo activo añadiendo la clase <code>activo</code> al <code>&lt;li&gt;</code> correspondiente.</p>
+    </section>
+  </main>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

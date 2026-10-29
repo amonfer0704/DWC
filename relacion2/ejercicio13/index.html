@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio 13 · Comunicación entre ventanas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="cabecera">
+    <a class="volver" href="../index.html">← Índice de ejercicios</a>
+    <p class="etiqueta">Ejercicio 13</p>
+    <h1>Comunicación entre ventanas</h1>
+  </header>
+
+  <main class="contenedor">
+    <section class="enunciado" aria-label="Enunciado">
+      <p>Investiga cómo intercambiar información de forma <strong>bidireccional</strong> entre la ventana principal y una secundaria que abramos (por ejemplo, el contenido de un campo de texto).</p>
+    </section>
+
+    <div class="rejilla">
+      <section class="tarjeta">
+        <h2>Ventana principal</h2>
+        <div class="acciones">
+          <button type="button" id="btn-abrir">Abrir ventana secundaria</button>
+          <button type="button" id="btn-cerrar" class="secundario">Cerrar secundaria</button>
+        </div>
+        <div class="campo campo-separado">
+          <label for="campo-principal">Mensaje para la secundaria</label>
+          <input id="campo-principal" type="text" autocomplete="off">
+        </div>
+        <div class="acciones">
+          <button type="button" id="btn-enviar">Enviar a la secundaria</button>
+        </div>
+        <h3>Recibido de la secundaria</h3>
+        <div id="recibido" class="salida" aria-live="polite">Sin mensajes.</div>
+      </section>
+
+      <section class="tarjeta">
+        <h2>Estado</h2>
+        <p>Ventana secundaria: <strong id="estado" class="estado cerrada">cerrada</strong></p>
+        <p class="nota">La ventana secundaria es <code>ventana-secundaria.html</code>, que está en la misma carpeta. Puedes usar <code>window.opener</code>, <code>postMessage()</code> o la referencia que devuelve <code>window.open()</code>.</p>
+      </section>
+    </div>
+  </main>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
